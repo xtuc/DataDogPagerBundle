@@ -190,7 +190,7 @@ class Pagination extends \ArrayIterator
 
         $this->pagination = $this->buildPagination($this->page, $range);
 
-        parent::__construct($paginator->getQuery()->getResult());
+        parent::__construct($paginator->getQuery()->getScalarResult());
     }
 
     /**
